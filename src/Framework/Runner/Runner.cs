@@ -1867,7 +1867,7 @@ namespace RTF.Framework
                 {"x|clean", "Cleanup journal files after test completion. (OPTIONAL)", v=> setupData.CleanUp = v != null},
                 {"continuous", "Run all selected tests in one Revit session. (OPTIONAL)", v=> setupData.Continuous = v != null},
                 {"groupByModel", "Run tests with same model without reopening the model for faster execution, requires continuous. (OPTIONAL)", v=> setupData.GroupByModel = v != null },
-                {"time", "The time, in milliseconds, after which RTF will close the testing process automatically. (OPTIONAL)", v=>setupData.Timeout = Int32.Parse(v) },
+                {"time=", "The time, in milliseconds, after which RTF will close the testing process automatically. (OPTIONAL)", v=>setupData.Timeout = Int32.Parse(v) },
                 {"d|debug", "Should RTF attempt to attach to a debugger?. (OPTIONAL)", v=>setupData.IsDebug = v != null },
                 {"h|help", "Show this message and exit. (OPTIONAL)", v=> showHelp = v != null }
             };
