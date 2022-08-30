@@ -6,7 +6,7 @@
         <owners>BIMLOGiQ</owners>
         <licenseUrl>https://github.com/DynamoDS/RevitTestFramework#license</licenseUrl>
         <projectUrl>https://github.com/DynamoDS/RevitTestFramework</projectUrl>
-        <id>BIMLOGiQ_RevitTestFramework</id>
+        <id>BIMLOGiQ.RevitTestFramework</id>
         <title>BIMLOGiQ RevitTest Framework</title>
         <iconUrl>http://dynamobim.org/favicon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
