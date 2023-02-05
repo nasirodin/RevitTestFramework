@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using RTF.Framework;
 
@@ -13,6 +14,7 @@ namespace RTF.Applications
         {
             try
             {
+                Debugger.Launch();
                 var setupData = Runner.ParseCommandLineArguments(args);
 
                 runner = new Runner(setupData);

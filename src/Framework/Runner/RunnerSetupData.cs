@@ -38,7 +38,7 @@ namespace RTF.Framework
         {
             CleanUp = true;
             GroupingType = GroupingType.Fixture;
-            Timeout = 60*60*1000;
+            Timeout = 120000;
         }
 
         public static Func<IList<RevitProduct>> RevitLookupOverride { get; set; } = null;

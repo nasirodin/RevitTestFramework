@@ -1927,7 +1927,7 @@ namespace RTF.Framework
                 {"isExport","Export the journal file for each wanted test. (OPTIONAL)",v=> setupData.IsExport = v != null },
                 {"journalSample=","A sample file for export. (OPRIONAL)", v=> setupData.JournalSample = Path.GetFullPath(v)},
                 {"exportFolder=","A folder to store the export journal files. (OPTIONAL)", v=> setupData.ExportFolder = Path.GetFullPath(v)},
-                {"time", "The time, in milliseconds, after which RTF will close the testing process automatically. (OPTIONAL)", v=>setupData.Timeout = Int32.Parse(v) },
+                {"time=", "The time, in milliseconds, after which RTF will close the testing process automatically. (OPTIONAL)", v=>setupData.Timeout = Int32.Parse(v) },
                 {"d|debug", "Should RTF attempt to attach to a debugger?. (OPTIONAL)", v=>setupData.IsDebug = v != null },
                 {"h|help", "Show this message and exit. (OPTIONAL)", v=> showHelp = v != null }
             };
