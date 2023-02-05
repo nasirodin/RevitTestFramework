@@ -20,6 +20,7 @@ namespace RTF.Framework
         public bool Concat { get; set; }
         public bool DryRun { get; set; }
         public string RevitPath { get; set; }
+        public string RevitVersion { get; set; }
         public bool CleanUp { get; set; }
         public bool Continuous { get; set; }
         public bool GroupByModel { get; set; }

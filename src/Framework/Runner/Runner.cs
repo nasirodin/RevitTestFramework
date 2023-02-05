@@ -184,6 +184,11 @@ namespace RTF.Framework
                 DeleteAddins();
             }
         }
+        /// <summary>
+        /// The version of Revit to be
+        /// used for testing
+        /// </summary>
+        public string RevitVersion { get; set; }
 
         /// <summary>
         /// The path to the version of Revit to be
@@ -360,6 +365,7 @@ namespace RTF.Framework
             Concat = setupData.Concat;
             DryRun = setupData.DryRun;
             RevitPath = setupData.RevitPath;
+            RevitVersion = setupData.RevitVersion;
             CleanUp = setupData.CleanUp;
             Continuous = setupData.Continuous;
             GroupByModel = setupData.GroupByModel;
@@ -897,6 +903,12 @@ namespace RTF.Framework
             {
                 if(String.IsNullOrEmpty(RevitPath) || !File.Exists(RevitPath))
                     throw new ArgumentException("No appropriate Revit versions found on this machine for testing.");
+            }
+
+            var selectedProduct = Products.FirstOrDefault(p => p.Version.ToString() == RevitVersion);
+            if (selectedProduct != null)
+            {
+                RevitPath = Path.Combine(selectedProduct.InstallLocation, "revit.exe");
             }
 
             if (String.IsNullOrEmpty(RevitPath))
@@ -1918,6 +1930,7 @@ namespace RTF.Framework
                 {"exclude:", "The name of a test category to exclude. This has a higher priority than other settings. If a specified category is set here, any test cases that belongs to that category will not be run. (OPTIONAL)", v=> setupData.ExcludedCategory = v},
                 {"c|concatenate", "Concatenate the results from this run of RTF with an existing results file if one exists at the path specified. The default behavior is to replace the existing results file. (OPTIONAL)", v=> setupData.Concat = v != null},
                 {"revit:", "The Revit executable to be used for testing. If no executable is specified, RTF will use the first version of Revit that is found on the machine using the RevitAddinUtility. (OPTIONAL)", v=> setupData.RevitPath = v},
+                {"revitVersion:", "The Revit version to be used for testing. If no version is specified, RTF will use the first version of Revit that is found on the machine using the RevitAddinUtility. (OPTIONAL)", v=> setupData.RevitVersion = v},
                 {"copyAddins", "Specify whether to copy the addins from the Revit folder to the current working directory. Copying the addins from the Revit folder will cause the test process to simulate the typical setup on your machine. (OPTIONAL)",
                     v=> setupData.CopyAddins = v != null},
                 {"dry", "Conduct a dry run. (OPTIONAL)", v=> setupData.DryRun = v != null},

@@ -77,6 +77,7 @@ namespace RTF.Framework
         bool Concat { get; set; }
         bool DryRun { get; set; }
         string RevitPath { get; set; }
+        string RevitVersion { get; set; }
         bool CleanUp { get; set; }
         bool Continuous { get; set; }
         bool GroupByModel { get; set; }

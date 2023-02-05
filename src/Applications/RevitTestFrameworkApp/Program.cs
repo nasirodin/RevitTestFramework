@@ -14,7 +14,6 @@ namespace RTF.Applications
         {
             try
             {
-                Debugger.Launch();
                 var setupData = Runner.ParseCommandLineArguments(args);
 
                 runner = new Runner(setupData);

@@ -29,6 +29,7 @@ Options:
          --exclude[=VALUE]       The name of a test category to exclude. This has a higher priortiy than other settings. If a specified category is set here, any test cases that belongs to that category will not be run. (OPTIONAL)  
     -c,  --concatenate           Concatenate the results from this run of RTF with an existing results file if one exists at the path specified. The default behavior is to replace the existing results file. (OPTIONAL)  
          --revit[=VALUE]         The Revit executable to be used for testing. If no executable is specified, RTF will use the first version of Revit that is found on the machine using the RevitAddinUtility. (OPTIONAL)  
+         --revitVersion[=VALUE]    The Revit version to be used for testing. If no version is specified, RTF will use the first version of Revit that is found on the machine using the RevitAddinUtility. (OPTIONAL)           
          --copyAddins            Specify whether to copy the addins from the Revit folder to the current working directory. Copying the addins from the Revit folder will cause the test process to simulate the typical setup on your machine. (OPTIONAL)  
          --dry                   Conduct a dry run. (OPTIONAL)  
     -x,  --clean                 Cleanup journal files after test completion. (OPTIONAL)   
