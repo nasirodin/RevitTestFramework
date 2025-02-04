@@ -1,0 +1,13 @@
+<Project>	
+	<PropertyGroup>
+		<Version>1.0.0.0</Version>
+		<Product>BIMLOGiQ Revit TestFramework</Product>
+		<Copyright>Copyright ©2022-$([System.DateTime]::Now.ToString("yyyy"))</Copyright>
+		<Company>BIMLOGiQ</Company>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+</Project>
